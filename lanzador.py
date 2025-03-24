@@ -7,9 +7,21 @@ def main():
     
     # Create an instance of ConversationFormatter
     formatter = ConversationFormatter(text)
+    formatted_text = format_conversation(text)
     
     # Format the conversation
     formatted_text = formatter.format_conversation()
+    formatted_text = formatted_text.replace(" -", "\n-")
+   
     
     # Print the formatted conversation
     print(formatted_text)
+
+def format_conversation(conversation):
+    # Create an instance of ConversationFormatter
+    formatter = ConversationFormatter(conversation)
+
+    # Format the conversation
+    formatted_text = formatter.format_conversation()
+
+    return formatted_text
